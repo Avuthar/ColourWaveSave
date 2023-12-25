@@ -26,7 +26,7 @@ saveButton.addEventListener('click', function() {
   
     const link = document.createElement('a');
     link.download = 'color-wave-background.jpg';
-    link.href = canvas.toDataURL('image/jpeg', 0.8); // Quality from 0 to 1
+    link.href = canvas.toDataURL('image/jpeg', 0.8);
     link.click();
 });
 
