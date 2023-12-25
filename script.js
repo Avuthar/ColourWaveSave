@@ -18,14 +18,12 @@ saveButton.addEventListener('click', function() {
     canvas.height = 1080;
     const ctx = canvas.getContext('2d');
 
-    // Create a gradient similar to the current background
     const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
     gradient.addColorStop(0, currentColor1);
     gradient.addColorStop(1, currentColor2);
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    // Create a link and set it to the image URL, then click it to download
+  
     const link = document.createElement('a');
     link.download = 'color-wave-background.jpg';
     link.href = canvas.toDataURL('image/jpeg', 0.8); // Quality from 0 to 1
